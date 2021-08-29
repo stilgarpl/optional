@@ -47,6 +47,7 @@ auto resultGood = optGoodString | flatMap(toInt); //optional<int> with value = 1
 ```
 
 ###filter
+
 Returns the same value if it matches the predicate or empty optional if it doesn't.
 
 ```c++
