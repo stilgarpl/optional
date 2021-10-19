@@ -54,10 +54,10 @@ Returns the same value if it matches the predicate or empty optional if it doesn
     using namespace bsc::optional;
     auto isEven               = [](auto i) { return i % 2 == 0; };
     std::optional<int> optFour = 4;
-    auto resultEven = optInt | filter(isEven); //result is optional with value =4
+    auto resultEven = optFour | filter(isEven); //result is optional with value =4
     
     std::optional<int> optFive = 5;
-    auto resultOdd = optInt | filter(isEven); //result is empty optional
+    auto resultOdd = optFive | filter(isEven); //result is empty optional
 ```
 
 ### orElse, orElseGet, orElseThrow
@@ -68,10 +68,10 @@ If optional is not empty, then return its value or else return supplied object (
     using namespace bsc::optional;
     auto isEven               = [](auto i) { return i % 2 == 0; };
     std::optional<int> optFour = 4;
-    auto resultEven = optInt | filter(isEven) | orElse(10); //result is int = 4
+    auto resultEven = optFour | filter(isEven) | orElse(10); //result is int = 4
     
     std::optional<int> optFive = 5;
-    auto resultOdd = optInt | filter(isEven) | orElse(10); //result is int = 10
+    auto resultOdd = optFive | filter(isEven) | orElse(10); //result is int = 10
 ```
 
 ### ifPresent
